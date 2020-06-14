@@ -15,6 +15,7 @@ body, html {
   line-height: 1.8;
 }
 
+h1{text-align: center;}
 /* Create a Parallax Effect */
 .bgimg-1, .bgimg-2, .bgimg-3 {
   background-attachment: fixed;
@@ -184,6 +185,60 @@ body, html {
   min-height: 100%;
 }
 
+
+/*Registration Section*/
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  background-color: black;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: white;
+  outline: none;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: white;
+  color: black;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: black;
+  text-align: center;
+}
+
 </style>
 <body>
 
@@ -209,7 +264,7 @@ body, html {
     <a href="#services" class="w3-bar-item w3-button" onclick="toggleFunction()">SERVICES</a>
     <a href="#pricing" class="w3-bar-item w3-button" onclick="myFunction()">HIRING</a>
     <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
-    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+    <a href="#" class="w3-bar-item w3-button">CART</a>
   </div>
 </div>
 
@@ -322,26 +377,31 @@ body, html {
   </div>
 
 <!-- Container (Contact Section) -->
-<div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
-  <h1 class="w3-wide w3-center">CONTACT US</h1>
-  <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
-  <br>
-  <form action="/action_page.php" target="_blank">
-    <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
-    <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
-    <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
-    <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
-    <p>
-      <button class="w3-button w3-black" type="submit">
-        <i class="fa fa-paper-plane"></i> SEND MESSAGE
-      </button>
-    </p>
-    <div style="margin-top:48px">
-      <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i>Nairobi,Kenya</p>
-      <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +254704445312</p>
-      <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email:rndonji@gmail.</p>
+<form action="/action_page.php">
+  <div class="container" id="contact">
+    <h1>Register</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+    <hr>
+    <p>By creating an account you agree to our <a href="terms.html ">Terms & Privacy</a>.</p>
+
+    <button type="submit" class="registerbtn">Register</button>
+  </div>
+  
+  <div class="container signin">
+    <p>Already have an account? <a href="sign in.html">Sign in</a>.</p>
+  </div>
 </form>
-</div>
+
 
 
 <!-- Third Parallax Image with Portfolio Text -->
